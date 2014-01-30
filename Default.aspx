@@ -162,8 +162,8 @@
     <script>
         $("#txtData").mask('00/00/0000');
         $("#txtDataGrid").mask('00/00/0000');
-        $("#txtValor").mask("##.##0,00", { reverse: true });
-        $("#txtValorGrid").mask("##.##0,00", { reverse: true });
+        $("#txtValor").mask("####0,00", { reverse: true });
+        $("#txtValorGrid").mask("####0,00", { reverse: true });
     </script>
 </body>
 </html>
