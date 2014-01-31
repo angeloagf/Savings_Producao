@@ -79,7 +79,7 @@
                             <asp:DropDownList runat="server" AutoPostBack="True" ID="drpPesquisa" CssClass="drp_busca" OnSelectedIndexChanged="drpPesquisa_SelectedIndexChanged">
                             </asp:DropDownList>
                         </div>
-                        <asp:GridView ID="grdResultado" runat="server" CssClass="grd" AutoGenerateColumns="False" OnRowDataBound="grdResultado_RowDataBound" OnRowEditing="grdResultado_RowEditing" OnRowCancelingEdit="grdResultado_RowCancelingEdit" OnRowDeleting="grdResultado_RowDeleting" Style="margin-bottom: 0px" OnRowUpdating="grdResultado_RowUpdating" ShowFooter="True" CellPadding="4" ForeColor="#333333" GridLines="None" AllowPaging="True" OnPageIndexChanging="grdResultado_PageIndexChanging">
+                        <asp:GridView ID="grdResultado" runat="server" CssClass="grd" AutoGenerateColumns="False" OnRowDataBound="grdResultado_RowDataBound" OnRowEditing="grdResultado_RowEditing" OnRowCancelingEdit="grdResultado_RowCancelingEdit" OnRowDeleting="grdResultado_RowDeleting" Style="margin-bottom: 0px" OnRowUpdating="grdResultado_RowUpdating" ShowFooter="True" CellPadding="4" ForeColor="#333333" GridLines="None" AllowPaging="True" OnPageIndexChanging="grdResultado_PageIndexChanging" PageSize="20">
                             <AlternatingRowStyle BackColor="White" />
                             <Columns>
                                 <asp:TemplateField HeaderText="ID" HeaderStyle-CssClass="noVisible" FooterStyle-CssClass="noVisible" ItemStyle-CssClass="noVisible">
@@ -98,7 +98,7 @@
                                         <asp:DropDownList runat="server" ID="drpNomeGrid" />
                                     </EditItemTemplate>
                                 </asp:TemplateField>
-                                <asp:TemplateField HeaderText="Data">
+                                <asp:TemplateField HeaderText="Data" SortExpression="lblData">
                                     <ItemTemplate>
                                         <asp:Label runat="server" ID="lblData" Text='<%# Bind("DATA") %>'></asp:Label>
                                     </ItemTemplate>
@@ -115,7 +115,7 @@
                                         </div>
                                     </ItemTemplate>
                                     <EditItemTemplate>
-                                        <asp:TextBox runat="server" CssClass="txt_tamanho_obs" TextMode="MultiLine" MaxLength="250" ID="txtObsGrid"></asp:TextBox><asp:RequiredFieldValidator ID="rfObs" ForeColor="red" ControlToValidate="txtObsGrid" runat="server" ErrorMessage="*"></asp:RequiredFieldValidator>
+                                        <asp:TextBox runat="server" CssClass="txt_tamanho_obs" TextMode="MultiLine" MaxLength="250" ID="txtObsGrid"></asp:TextBox>
                                     </EditItemTemplate>
                                     <FooterTemplate>
                                         <asp:Label ID="lblTotal" runat="server" Text="Total"></asp:Label>
