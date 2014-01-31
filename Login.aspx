@@ -6,6 +6,7 @@
 <head runat="server">
     <title>Savings</title>
     <link href="CSS/estilo_01.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="Images/money.ico"/>
 </head>
 <body>
     <form id="form1" runat="server">
