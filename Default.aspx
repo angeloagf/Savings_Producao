@@ -8,6 +8,7 @@
     <script src="JS/jquery-2.0.1.min.js"></script>
     <script src="JS/jquery.mask.min.js"></script>
     <link href="CSS/estilo_01.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="Images/money.ico"/>
 </head>
 <body>
     <form id="frmPrincipal" runat="server">
@@ -17,8 +18,13 @@
                 <div class="logo fl"></div>
             </div>
         </div>
+        <div id="exit" class="fr" style="width: 520px">
+            <a  href="Login.aspx" title="Sair"><img src="Images/sair.png"/></a>
+        </div>
         <div class="container">
+
             <div id="conteudo_cadastro">
+
                 <div>
                     <asp:Label runat="server" ID="lblResultado" Text="Resultado" CssClass="lbl" Visible="False"></asp:Label>
                 </div>
